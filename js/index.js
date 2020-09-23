@@ -45,7 +45,8 @@ const siteContent = {
 //write your code here
 const parent = document.querySelector(".container");
 console.log(parent);
-
+//clone
+const conbefore=document.querySelector(".container").cloneNode(true);
 
 
 // add child 
@@ -80,6 +81,16 @@ a.setAttribute("src","./img/logo.png");
 
  const a2 = document.querySelector("body > div > section.cta > div > button");
  a2.textContent="Get started";
+ 
+
+
+ a2.addEventListener("click", myFunction);
+ function myFunction() {
+   document.body.textContent="";
+   document.body.appendChild(conbefore);
+  }
+  
+
 
  const a3=  document.getElementById("cta-img");
  a3.setAttribute("src","./img/header-img.png");
